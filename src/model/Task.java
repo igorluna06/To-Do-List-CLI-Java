@@ -12,23 +12,23 @@ public class Task {
     private String title;
     private String description;
     private LocalDateTime createdAt;
-    private LocalDateTime  updatedAt;
+    private LocalDateTime  updatedAt = null;
     private Status status;
 
     public Task(){}
 
-    public Task(String title, String description) {
+    public Task(int id,String title, String description) {
+        this.id = id;
         this.title = title;
         this.description = description;
         this.createdAt = LocalDateTime.now();
-        this.updatedAt = LocalDateTime.now();
         this.status = Status.PENDING;
     }
 
-    public Task(String title){
+    public Task(int id, String title){
+        this.id = id;
         this.title = title;
         this.createdAt = LocalDateTime.now();
-        this.updatedAt = LocalDateTime.now();
         this.status = Status.PENDING;
     }
 

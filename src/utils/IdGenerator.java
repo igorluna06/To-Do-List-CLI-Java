@@ -12,6 +12,10 @@ public class IdGenerator {
     }
 
     public int generateId(){
-        return counter++;
+        return ++counter;
+    }
+
+    public int getCurrentId() {
+        return counter;
     }
 }
